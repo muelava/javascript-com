@@ -10,9 +10,18 @@
 
 	<style type="text/css">
 		body{
+			overflow-x: hidden;
 			margin: 0;
 			padding: 0;
-			font-family: verdana;
+			font-family: gotham medium;
+		}
+		@font-face{
+			font-family:gotham medium;
+			src:url('Gotham Medium.otf');
+		}
+		@font-face{
+			font-family: gotham light;
+			src:url('Gotham Light.otf');
 		}
 		.header{
 			background-color: #000;
@@ -46,16 +55,21 @@
 		.header-child > a{
 			text-transform: capitalize;
 			color: #fff;
+			font-family: gotham light;
 
 		}
 
 		.content{
 			background-image: url('https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block/image-res.img.73cb9796-6f54-4231-9593-6e52d51ea299.jpg');
+			background-size:cover;
 			text-align:center;
-			padding-top: 60px;
 			padding: 0 280px;
+			line-height: 1.8;
 		}
 		.content h2{
+			letter-spacing: 3px;
+			font-family: gotham medium;
+			padding-top:100px;
 			color: #aaa;
 			font-size: 18px;
 			text-transform: uppercase;
@@ -64,17 +78,41 @@
 			font-size: 66px;
 			font-weight: bold;
 			color: #fff;
+			padding-bottom: 35px;
 		}
 		.content p{
 			color: #aaa;
 			font-size: 18px;
 		}
 		.content p code{
+			background: #fff;
 			font-size: 18px;
 			color: #000;
 			padding: 5px;
-			background-color: #fff;
-			border-radius: 5px;
+			border-radius: 2px;
+		}
+		#myTag{
+			background: rgba(18,18,18,0.9);
+			border:0;
+			font-size: 20px;
+			padding: 30px;
+			margin: 16px;
+			color: #fff;
+			transition: .4s linear;
+		}
+		#myTag:focus{
+			outline: none;
+			box-shadow: none;
+			border:none;
+		}
+		.alert{
+			background-image: url(https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block/image-res.img.7c127c08-628f-4014-a684-b8d9a0f79884.jpg);
+			height: 200px;
+		}
+		.alert > button:active{
+			outline: none;
+			border:none;
+			box-shadow: none;
 		}
 	</style>
 </head>
@@ -84,7 +122,7 @@
 		<div class="header">
 			<a href="#"><img class="header-logo" src="https://www.javascript.com/etc/clientlibs/pluralsight/main/images/js-logo.png"></a>			
 			<div class="header-child">
-				<a href="#"><button class="btn">try javascript</button></a>
+				<a style="font-family: gotham medium" href="#"><button class="btn">try javascript</button></a>
 				<a href="#">learn</a>
 				<a href="#">resaurces</a>
 				<a href="#">about</a>
@@ -92,13 +130,29 @@
 		</div>
 
 		<div class="content">
-			<h2>Ready Try</h2>
+			<h2>Ready to Try</h2>
 			<h1>JavaScript?</h1>
 			<p>Begin learning here by typing in your first name surrounded by quotation marks, and ending with a semicolon. For example, you could type the name <code>"Jamie";</code>  and then hit enter.</p>
+			<input class="form-control" id="myTag"  type="text" data-role="tagsinput">
+			<div style="height: 100px;"></div>
+		</div>
 
+		<div class="alert alert-primary alert-dismissible fade show">
+			<button onclick="this.parentElement.style.display='none';" type="button" class="close" data-dismiss="alert">
+				&times;
+			</button>
+		</div>
+
+<!-- tag percobaan start -->
+		<div class="d-flex justify-content-center">
+		<img style="width: 300px;" src="https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block/image-res.img.7c127c08-628f-4014-a684-b8d9a0f79884.jpg">
+		<img style="width: 300px;" src="https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block_copy/image-res.img.b1c04fd9-0c74-4e0d-b916-e4eb284b000b.jpg">
+		<img style="width: 300px;" src="https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block_copy_1521714602/image-res.img.86821194-4f81-4271-86bd-b9b45ee5771b.jpg">
+		</div>
+
+<!-- tag percobaan end -->
 		</content>
 
-	</div>
 	<script type="assets/js/bootstrap.js"></script>
 	<script type="assets/js/popper.js"></script>
 	<script type="assets/js/jquerry.js"></script>
