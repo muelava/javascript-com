@@ -32,6 +32,8 @@
 		}
 		.header-logo{
 			 height: 65px;
+			 width: 276px;
+
 		}
 		.btn{
 			font-size: 14px;
@@ -96,8 +98,8 @@
 			border:0;
 			font-size: 20px;
 			padding: 30px;
-			margin: 16px;
 			color: #fff;
+			margin: 30px auto;
 			transition: .4s linear;
 		}
 		#myTag:focus{
@@ -105,14 +107,121 @@
 			box-shadow: none;
 			border:none;
 		}
-		.alert{
-			background-image: url(https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block/image-res.img.7c127c08-628f-4014-a684-b8d9a0f79884.jpg);
+		#notif{
+			background-image: url(https://www.javascript.com/content/pluralsight/en/global/promos/gops/jcr:content/main/promo_wrapper_copy/parsys/generic_block_108870/image-res.img.579be1c8-a626-4137-b74c-f84f9909a15c.jpg);
 			height: 200px;
+			color: #fff;
+			height: 130px;
+			margin: 0;
+			border:0;
+			text-align: center;
 		}
-		.alert > button:active{
+		#notif > button:active{
 			outline: none;
+			color: #E8B4B4;
 			border:none;
 			box-shadow: none;
+		}
+		#notif > h2{
+			text-transform: uppercase;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		#notif > h3{
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+		#notif .close{
+			background-color: rgb(189,189,189,.3);
+			padding: 1px 6px;
+			font-size: 18px;
+			border-radius:50px; 
+			transition: .5s;
+		}
+		.image {
+			text-align: center;
+			display: flex;
+			color: #fff;
+			box-shadow: 0px -50px 50px black;
+		}
+		.image > .inner1, .inner2, .inner3{
+			width: 450px;
+			height: 447px;
+			background-position: -130px 0;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 0 70px;
+
+		}
+		.inner1 h2, .inner2 h2, .inner3 h2{
+			color:#aaa;
+			font-size:14px;
+			letter-spacing: 3.0px;
+			text-transform: uppercase;
+		}
+		.inner1 span, .inner2 span, .inner3 span{
+			font-size: 32px;
+			text-transform: capitalize;
+		}
+		.inner1 button, .inner2 button, .inner3 button{
+			margin: 0 auto;
+			margin-top: 15px;
+
+		}
+		#notif-bottom{
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			margin-bottom: 0;
+			background:rgb(19,19,19,.9);
+			border:none;
+			color: #aaa;
+			font-size: 14px;
+			padding-bottom: 0;
+			font-family: gotham light;
+		}
+		#notif-bottom p1{
+			float: left;
+			width: 50%;
+		}
+		#notif-bottom button{
+			float: right;
+			color: #FF0072;
+			margin:14px 0;
+			cursor: pointer;
+			background:transparent;
+			outline: none;
+			border: none;
+		}
+		#notif-bottom button:hover{
+			text-decoration: underline;
+		}
+		.footer{
+			padding:35px;
+			background-color: #000;
+			height: 100px;
+			font-family: gotham light;
+			color:#aaa;
+		}
+		.footer img{
+			height: 40px;
+			width: 172px;
+		}
+		.footer p{
+			margin: auto 0;
+			margin-left: 14px;
+			font-size: 10px;
+			display: inline-block;
+		}
+		.footer a, span{
+			text-transform: capitalize;
+			color: #fff;
+			font-size: 12px;
+			float: right;
+			display: inline-block;
+			margin: 0 7px;
+			margin-top:11px;
 		}
 	</style>
 </head>
@@ -129,6 +238,13 @@
 			</div>
 		</div>
 
+		<div id="notif" class="alert alert-primary alert-dismissible fade show">
+			<h2 class="text-center">gift pluralsight</h2>
+			<h3 class="text-center">THE GIFT THAT KEEPS ON GIVING (ALL CAREER LONG)</h3>
+			<button style="background-color: #ffb115;" class="btn">Get gifting</button>
+			<button onclick="this.parentElement.style.display='none';" type="button" class="close" data-dismiss="alert">&times;</button>
+		</div>
+
 		<div class="content">
 			<h2>Ready to Try</h2>
 			<h1>JavaScript?</h1>
@@ -136,21 +252,38 @@
 			<input class="form-control" id="myTag"  type="text" data-role="tagsinput">
 			<div style="height: 100px;"></div>
 		</div>
+		<div class="hero"></div>
 
-		<div class="alert alert-primary alert-dismissible fade show">
-			<button onclick="this.parentElement.style.display='none';" type="button" class="close" data-dismiss="alert">
-				&times;
-			</button>
+		<div class="image">
+			<div class="inner1" style="background-image: url('https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block/image-res.img.7c127c08-628f-4014-a684-b8d9a0f79884.jpg');">
+				<h2>introduction</h2>
+				<span>courses and paths to get you going</span>
+				<button class="btn">get started</button>
+			</div>
+			<div class="inner2" style="background-image: url('https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block_copy/image-res.img.b1c04fd9-0c74-4e0d-b916-e4eb284b000b.jpg');">
+				<h2>skill assessment</h2>
+				<span>know where your skills stand</span>
+				<button class="btn">measure your skills</button>
+			</div>
+			<div class="inner3" style="background-image: url('https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block_copy_1521714602/image-res.img.86821194-4f81-4271-86bd-b9b45ee5771b.jpg');">
+			<h2>introduction</h2>
+			<span>see where javascript ranks</span>
+			<button class="btn">dive intro the data</button>	
+			</div>
 		</div>
 
-<!-- tag percobaan start -->
-		<div class="d-flex justify-content-center">
-		<img style="width: 300px;" src="https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block/image-res.img.7c127c08-628f-4014-a684-b8d9a0f79884.jpg">
-		<img style="width: 300px;" src="https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block_copy/image-res.img.b1c04fd9-0c74-4e0d-b916-e4eb284b000b.jpg">
-		<img style="width: 300px;" src="https://www.javascript.com/content/pluralsight/en/jscom/jcr:content/main/generic_block_614019370/parsys/flex_block/parsys/flex_open_block_copy_1521714602/image-res.img.86821194-4f81-4271-86bd-b9b45ee5771b.jpg">
+		<div id="notif-bottom" class="alert alert-light" role="alert">
+			<p1>You have disabled cookies and are browsing in private mode. For the best possible experience on our website, please accept cookies. For additional details please read our privacy policy.</p1>
+			<button onclick="this.parentElement.style.display='none';" type="button" data-dismiss="alert">accept cokies and close this message</button>
 		</div>
 
-<!-- tag percobaan end -->
+		<div class="footer">
+			<img src="https://www.javascript.com/etc/clientlibs/pluralsight/main/images/js-logo.png">
+			<p>&copy; 2016-2019 javascript.com </p>				
+			<a href="#">About</a><span>/</span>
+			<a href="#">Resources</a><span>/</span>
+			<a href="#">learn</a>
+		</div>
 		</content>
 
 	<script type="assets/js/bootstrap.js"></script>
